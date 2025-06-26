@@ -67,7 +67,7 @@ TaskManager/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://https://github.com/anandhakrishnan13/taskmanager/
+git clone https://github.com/anandhakrishnan13/taskmanager/
 cd taskmanager
 ```
 
