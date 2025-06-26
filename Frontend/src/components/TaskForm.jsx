@@ -11,7 +11,7 @@ const TaskForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/tasks', {
+      await axios.post('https://taskmanager-sb4l.onrender.com/tasks', {
         title,
         description,
         assignedTo,

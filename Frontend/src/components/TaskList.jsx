@@ -12,7 +12,7 @@ const TaskList = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/tasks');
+      const response = await axios.get('https://taskmanager-sb4l.onrender.com/tasks');
       setTasks(response.data);
     } catch (err) {
       console.error('Error fetching tasks:', err.message);

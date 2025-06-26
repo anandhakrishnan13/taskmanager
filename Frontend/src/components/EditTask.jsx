@@ -13,7 +13,7 @@ const EditTask = () => {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const res = await axios.get('http://localhost:3000/tasks');
+        const res = await axios.get('https://taskmanager-sb4l.onrender.com/tasks');
         const found = res.data.find((t) => t._id === id);
         if (found) {
           setTask(found);
@@ -28,7 +28,7 @@ const EditTask = () => {
 
   const handleStatusUpdate = async () => {
     try {
-      await axios.patch(`http://localhost:3000/tasks/${id}`, {
+      await axios.patch(`https://taskmanager-sb4l.onrender.com/tasks/${id}`, {
         status: newStatus,
       });
       alert('Task status updated!');
@@ -42,7 +42,7 @@ const EditTask = () => {
     const confirm = window.confirm('Are you sure you want to delete this task?');
     if (!confirm) return;
     try {
-      await axios.delete(`http://localhost:3000/tasks/${id}`);
+      await axios.delete(`https://taskmanager-sb4l.onrender.com/tasks/${id}`);
       alert('Task deleted!');
       navigate('/tasks');
     } catch (err) {
