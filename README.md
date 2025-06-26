@@ -54,7 +54,8 @@ TaskManager/
 │   │   └── Task.js
 │   ├── routes/
 │   │   └── taskRoutes.js
-│   ├── db.js
+│   ├── config/
+│   │   └── db.js
 │   ├── server.js
 │   └── package.json
 ```
@@ -66,7 +67,7 @@ TaskManager/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/mern-task-manager.git
+git clone https://https://github.com/anandhakrishnan13/taskmanager/
 cd taskmanager
 ```
 
