@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+.tasklist-container {
+  max-width: 700px;
+  margin: 20px auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.back-btn {
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tabs {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
+}
+
+.tabs * {
+  z-index: 2;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  width: 150px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+input[type=radio]:checked+label {
+  color: #185ee0;
+}
+
+input[id=radio-all]:checked ~ .glider {
+  transform: translateX(0%);
+}
+input[id=radio-todo]:checked ~ .glider {
+  transform: translateX(100%);
+}
+input[id=radio-inprogress]:checked ~ .glider {
+  transform: translateX(200%);
+}
+input[id=radio-done]:checked ~ .glider {
+  transform: translateX(300%);
+}
+
+.glider {
+  position: absolute;
+  display: flex;
+  height: 54px;
+  width: 150px;
+  background-color: #e6eef9;
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+  .tabs {
+    transform: scale(0.7);
+  }
+}
+
+
+.filter-wrapper {
+  margin: 20px 0;
+  position: relative;
+}
+
+.filter-btn {
+  background: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.filter-dropdown {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  border-radius: 5px;
+  width: 220px;
+  z-index: 5;
+  padding: 8px 0;
+}
+
+.filter-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.filter-item:hover,
+.filter-item.active {
+  background-color: #f1f1f1;
+}
+
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: white;
+}
+
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task-details {
+  flex-grow: 1;
+}
+
+.edit-btn {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.edit-btn:hover {
+  background-color: #e67e22;
+}
